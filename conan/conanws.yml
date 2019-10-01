@@ -1,0 +1,13 @@
+editables:
+  component-a/0.1@user/testing:
+    path: component-a
+  component-b/0.1@user/testing:
+    path: component-b
+  app/0.1@user/testing:
+    path: app
+# layout: # see https://docs.conan.io/en/latest/reference/config_files/editable_layout.html#editable-layout
+workspace_generator: cmake
+
+# the root defines the consumers of the graph - usually executables. they can also be a list
+root: app/0.1@user/testing
+#root: component-a/0.1@user/testing
